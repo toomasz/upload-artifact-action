@@ -1,25 +1,27 @@
-# ref: https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
-name: Upload artifact to server action
-description: This action uploads artifact to server 
-
-author: Justin Yoo
-
+name: 'Upload File Action'
+description: 'upload file'
+author: 'Jant Hsueh(薛瑄)'
 branding:
-  color: green
-  icon: activity
-
+  icon: arrow-right-circle
+  color: gray-dark
 inputs:
-  name:
+  url:
+    description: 'Web request URL endpoint'
     required: true
-    description: Name to pass
-    # default:
+  method:
+    description: 'Web request method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)'
+    required: true
+    default: POST
+  forms:
+    description: Data to be transmitted,such as key, pwd, etc. Use json format
+    required: false
+  fileForms:
+    description: Files to be transferred,such as 'file','image' etc. Use json format
+    required: false
 
 outputs:
-  greeting:
-    description: Greetings to be passed
-
+  output:
+    description: 'data output from the upload file'
 runs:
-  using: docker
-  image: Dockerfile
-  env:
-    NAME: ${{ inputs.name }}
+  using: 'node12'
+  main: 'dist/index.js'
