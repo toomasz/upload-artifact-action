@@ -1,6 +1,6 @@
 # ref: https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
-name: GitHub Actions Docker Sample
-description: This is a simple GitHub Actions sample using a Docker container
+name: Upload artifact to server action
+description: This action uploads artifact to server 
 
 author: Justin Yoo
 
