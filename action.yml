@@ -1,6 +1,6 @@
-name: 'Upload File Action'
-description: 'upload file'
-author: 'Jant Hsueh(薛瑄)'
+name: 'Put file with POST request'
+description: 'Put file with POST request to REST api'
+author: 'Jant Hsueh(薛瑄) & Tomasz Scislowicz'
 branding:
   icon: arrow-right-circle
   color: gray-dark
