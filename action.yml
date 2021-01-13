@@ -1,0 +1,25 @@
+# ref: https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
+name: GitHub Actions Docker Sample
+description: This is a simple GitHub Actions sample using a Docker container
+
+author: Justin Yoo
+
+branding:
+  color: green
+  icon: activity
+
+inputs:
+  name:
+    required: true
+    description: Name to pass
+    # default:
+
+outputs:
+  greeting:
+    description: Greetings to be passed
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    NAME: ${{ inputs.name }}
